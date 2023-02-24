@@ -1,2 +1,2 @@
 # Practice_Lab
-Lab 02_git_vscode
+Lab_git_vscode
