@@ -8,17 +8,19 @@
 # Puts the name of the four directories in an array
 # References the array variable to create a new .txt file in each directory.
 
-# Main
-
 # Create four directories:
 
-# mkdir dir1 dir2 dir3 dir4
+mkdir dir1 dir2 dir3 dir4
 
-# Put the names of the four directories in an array:
+# Put the names of four directories in an array
 
-# directory_array=("dir1.sh" "dir2.sh" "dir3.sh" "dir4.sh")
+puppyArray=("corgi" "labrador" "husky" "poodle")
 
-# Reference the array variables to create a new .txt file in each directory:
+# Main
 
+echo ${puppyArray[3]}/file4.txt
+echo ${puppyArray[2]}/file3.txt
+echo ${puppyArray[1]}/file2.txt
+echo ${puppyArray[0]}/file1.txt
 
 # End
