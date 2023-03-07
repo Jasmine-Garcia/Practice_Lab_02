@@ -8,4 +8,20 @@
 # CPU, RAM, Display adapter, Network adapter
 
 # Main
+
+# Name of Computer:
+echo "devserver201"
+
+# CPU Information: 
+sudo lshw | grep -A6 "cpu"
+
+# RAM Information
+sudo lshw | grep -A3 "memory"
+
+# Display adapter information
+sudo lshw | grep -A10 "display"
+
+# Network adapter information
+sudo lshw | grep -A15 "network"
+
 # End 
