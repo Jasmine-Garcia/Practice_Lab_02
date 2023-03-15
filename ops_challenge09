@@ -7,12 +7,10 @@
 
 #Output all events from the System event log that occurred in the last 24 hours to a file on your desktop named last_24.txt.
 $Yesterday = (Get-Date) - (New-TimeSpan -Day 1)
-Get-WinEvent -LogName 'Windows PowerShell' | Where-Object { $_.TimeCreated -ge $Yesterday }
-$logfilepath > C:\Users\Jasmine\Documents\last_24.txt
+Get-WinEvent -LogName 'Windows PowerShell' | Where-Object { $_.TimeCreated -ge $Yesterday } > C:\Users\Jasmine\Documents\last_24.txt
 
 #Output all “error” type events from the System event log to a file on your desktop named errors.txt.
-Get-EventLog -LogName System -EntryType Error
-$logfilepath > C:\Users\Jasmine\Documents\errors.txt
+Get-EventLog -LogName System -EntryType Error > C:\Users\Jasmine\Documents\errors.txt
 
 #Print to the screen all events with ID of 16 from the System event log.
 Get-EventLog -LogName System -InstanceId 16
