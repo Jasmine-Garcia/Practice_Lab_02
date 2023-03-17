@@ -14,12 +14,21 @@ Get-Process | Sort-Object -Property id -Descending
 Get-Process | Sort-Object -Property WS | Select -first 5
 
 #Start the process Internet Explorer (iexplore.exe) and have it open https://owasp.org/www-project-top-ten/.
+Start-Process -FilePath "iexplore.exe" -ArgumentList "https://owasp.org/www-project-top-ten/"
 
 #Start the process Internet Explorer (iexplore.exe) ten times using a for loop. Have each instance open https://owasp.org/www-project-top-ten/.
+1..10 | foreach { Start-Process -FilePath "iexplore.exe" -ArgumentList "https://owasp.org/www-project-top-ten/" }
 
 #Close all Internet Explorer windows.
+-Stop-Process -name "iexplore.exe"
 
 #Kill a process by its Process Identification Number. Choose a process whose termination won’t destabilize the system, such as Internet Explorer or MS Edge.
+taskkill /f /PID 10036
 
 #Resources
-#TechNet Microsoft Forums
+#https://social.technet.microsoft.com/Forums/en-US/ba19a65b-d127-44e6-b088-5ffc50f5b4d7/need-powershell-script-to-get-top-5-cpu-along-with-idname-amp-username-as-similar-to-task-manager?forum=winserverpowershell
+#https://learn.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Management/Start-Process?view=powershell-7.3
+#https://ourtechroom.com/tech/open-weburl-using-powershell-commandline/
+#https://www.oreilly.com/library/view/windows-powershell-cookbook/9781449359195/ch04.html#:~:text=Use%20one%20of%20PowerShell's%20looping,script%20block%20more%20than%20once.
+#https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/stop-process?view=powershell-7.3
+https://www.itprc.com/kill-process-with-powershell/
