@@ -31,4 +31,4 @@ taskkill /f /PID 10036
 #https://ourtechroom.com/tech/open-weburl-using-powershell-commandline/
 #https://www.oreilly.com/library/view/windows-powershell-cookbook/9781449359195/ch04.html#:~:text=Use%20one%20of%20PowerShell's%20looping,script%20block%20more%20than%20once.
 #https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/stop-process?view=powershell-7.3
-https://www.itprc.com/kill-process-with-powershell/
+#https://www.itprc.com/kill-process-with-powershell/
