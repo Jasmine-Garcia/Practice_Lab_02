@@ -1,0 +1,17 @@
+#Script:                       Ops Challenge 12
+#Author:                       Jasmine Garcia
+#Date of latest revision:      March 23, 2023
+#Purpose:                      Write a Powershell script that returns the IPv4 address of the computer.
+#                              Use Select-String cmdlet to only return the IPv4 address string and no other extraneous information
+
+#Main
+
+#Create a local file called network_report.txt that holds the contents of an ipconfig /all command.
+cd Documents 
+ipconfig /all > "network_report.txt"
+
+#Use Select-String to search network_report.txt and return only the IP version 4 address.
+Select-String -Path "network_report.txt"
+
+#Remove the network_report.txt when you are finished searching it.
+rm "network_report.txt"
