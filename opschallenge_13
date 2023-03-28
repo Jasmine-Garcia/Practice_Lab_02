@@ -46,4 +46,11 @@ display_information () {
 }
 display_information
 
+# Output the results to a single .txt file and open it with your favorite text editor.
+
+whois $DomainName > "whois.txt"
+dig $DomainName > "dig.txt"
+host $DomainName > "host.txt"
+nslookup $DomainName > "nslookup"
+
 # End
