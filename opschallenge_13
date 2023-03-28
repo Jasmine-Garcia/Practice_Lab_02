@@ -1,0 +1,49 @@
+#!/bin/bash
+
+# Script: Ops 201 Class 13 Ops Challenge Solution
+# Author: Jasmine Garcia 
+# Date of latest revision: March 27, 2023
+# Purpose: Create a script that asks a user to type a domain, then displays information about the typed domain.
+#          Operations that must be used include: whois, dig, host, nslookup
+#          Output the results to a single .txt file and open it with your favorite text editor.
+#          For this challenge you must use at least one variable and one function.
+
+# variable 
+DomainName=amazon.com
+echo $DomainName
+
+# Install whois on your Ubuntu VM
+# sudo apt-get install whois
+
+# Take a user input string. Presumably the string is a domain name such as Google.com.
+# I will use amazon.com
+
+# Main
+
+echo Please look up some information for me please. 
+
+# Run whois against a user input string.
+display_information () {
+    whois $DomainName
+}
+display_information
+
+# Run dig against the user input string.
+display_information () {
+    dig $DomainName
+}
+display_information
+
+# Run host against the user input string.
+display_information () {
+    host $DomainName
+}
+display_information
+
+# Run nslookup against the user input string.
+display_information () {
+    nslookup $DomainName
+}
+display_information
+
+# End
