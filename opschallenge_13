@@ -51,6 +51,6 @@ display_information
 whois $DomainName > "whois.txt"
 dig $DomainName > "dig.txt"
 host $DomainName > "host.txt"
-nslookup $DomainName > "nslookup"
+nslookup $DomainName > "nslookup.txt"
 
 # End
