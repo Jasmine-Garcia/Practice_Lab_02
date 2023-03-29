@@ -9,8 +9,9 @@
 #          For this challenge you must use at least one variable and one function.
 
 # variable 
-DomainName=amazon.com
-echo $DomainName
+# DomainName=amazon.com
+# echo $DomainName
+read -p ' What domain name would you like me to look up? ' DomainName 
 
 # Install whois on your Ubuntu VM
 # sudo apt-get install whois
@@ -20,37 +21,17 @@ echo $DomainName
 
 # Main
 
-echo Please look up some information for me please. 
-
 # Run whois against a user input string.
+# Run dig against the user input string.
+# Run host against the user input string.
+# Run nslookup against the user input string.
+
 display_information () {
     whois $DomainName
-}
-display_information
-
-# Run dig against the user input string.
-display_information () {
     dig $DomainName
-}
-display_information
-
-# Run host against the user input string.
-display_information () {
     host $DomainName
-}
-display_information
-
-# Run nslookup against the user input string.
-display_information () {
     nslookup $DomainName
 }
-display_information
-
-# Output the results to a single .txt file and open it with your favorite text editor.
-
-whois $DomainName > "whois.txt"
-dig $DomainName > "dig.txt"
-host $DomainName > "host.txt"
-nslookup $DomainName > "nslookup.txt"
+display_information > summary.txt
 
 # End
